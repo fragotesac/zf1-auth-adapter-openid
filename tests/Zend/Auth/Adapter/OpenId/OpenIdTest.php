@@ -20,43 +20,7 @@
  * @version    $Id$
  */
 
-
-/**
- * PHPUnit\Framework\TestCase
- */
-
-/**
- * Zend_OpenId_ResponseHelper
- */
-require_once 'Zend/OpenId/ResponseHelper.php';
-
-
-/**
- * Zend_OpenId_Consumer_Storage_File
- */
-require_once 'Zend/OpenId/Consumer/Storage/File.php';
-
-
-/**
- * Zend_OpenId_Extension_Sreg
- */
-require_once 'Zend/OpenId/Extension/Sreg.php';
-
-
-/**
- * @see Zend_Auth_Adapter_OpenId
- */
-require_once 'Zend/Auth/Adapter/OpenId.php';
-
-/**
- * @see Zend_OpenId_Consumer_Storage_File
- */
-require_once 'Zend/OpenId/Consumer/Storage/File.php';
-
-/**
- * Zend_Http_Client_Adapter_Test
- */
-require_once 'Zend/Http/Client/Adapter/Test.php';
+require_once __DIR__ . '/ResponseHelper.php';
 
 /**
  * @category   Zend
