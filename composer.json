@@ -12,10 +12,9 @@
     "prefer-stable": true,
     "require": {
         "php": ">=7.0.0",
-        "diablomedia/zendframework1-controller": "dev-master",
-        "diablomedia/zendframework1-http": "dev-master",
-        "diablomedia/zendframework1-openid": "dev-master",
-        "diablomedia/zendframework1-auth": "dev-master"
+        "diablomedia/zendframework1-controller": "^1.0.0",
+        "diablomedia/zendframework1-openid": "^1.0.0",
+        "diablomedia/zendframework1-auth": "^1.0.0"
     },
     "autoload": {
         "psr-0": {
