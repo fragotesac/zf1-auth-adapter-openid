@@ -49,7 +49,7 @@ class Zend_Auth_Adapter_OpenIdTest extends PHPUnit\Framework\TestCase
         $this->assertSame(0, $ret->getCode());
         $msgs = $ret->getMessages();
         $this->assertInternalType('array', $msgs);
-        $this->assertSame(2, count($msgs));
+        $this->assertCount(2, $msgs);
         $this->assertSame('Authentication failed', $msgs[0]);
         $this->assertSame('Missing openid.mode', $msgs[1]);
     }
@@ -63,7 +63,7 @@ class Zend_Auth_Adapter_OpenIdTest extends PHPUnit\Framework\TestCase
         $this->assertSame(0, $ret->getCode());
         $msgs = $ret->getMessages();
         $this->assertInternalType('array', $msgs);
-        $this->assertSame(2, count($msgs));
+        $this->assertCount(2, $msgs);
         $this->assertSame('Authentication failed', $msgs[0]);
         $this->assertSame('Normalisation failed', $msgs[1]);
     }
@@ -88,9 +88,9 @@ class Zend_Auth_Adapter_OpenIdTest extends PHPUnit\Framework\TestCase
         $headers = $response->getHeaders();
         $this->assertSame('', $response->getBody());
         $this->assertInternalType('array', $headers);
-        $this->assertSame(1, count($headers));
+        $this->assertCount(1, $headers);
         $this->assertInternalType('array', $headers[0]);
-        $this->assertSame(3, count($headers[0]));
+        $this->assertCount(3, $headers[0]);
         $this->assertSame('Location', $headers[0]['name']);
         $this->assertSame(true, $headers[0]['replace']);
         $url = $headers[0]['value'];
@@ -106,7 +106,7 @@ class Zend_Auth_Adapter_OpenIdTest extends PHPUnit\Framework\TestCase
             }
         }
         $this->assertInternalType('array', $query);
-        $this->assertSame(6, count($query));
+        $this->assertCount(6, $query);
         $this->assertSame('checkid_setup', $query['openid.mode']);
         $this->assertSame('http%3A%2F%2Freal_id.myopenid.com%2F', $query['openid.identity']);
         $this->assertSame('http%3A%2F%2Fid.myopenid.com%2F', $query['openid.claimed_id']);
@@ -136,9 +136,9 @@ class Zend_Auth_Adapter_OpenIdTest extends PHPUnit\Framework\TestCase
         $headers = $response->getHeaders();
         $this->assertSame('', $response->getBody());
         $this->assertInternalType('array', $headers);
-        $this->assertSame(1, count($headers));
+        $this->assertCount(1, $headers);
         $this->assertInternalType('array', $headers[0]);
-        $this->assertSame(3, count($headers[0]));
+        $this->assertCount(3, $headers[0]);
         $this->assertSame('Location', $headers[0]['name']);
         $this->assertSame(true, $headers[0]['replace']);
         $url = $headers[0]['value'];
@@ -154,7 +154,7 @@ class Zend_Auth_Adapter_OpenIdTest extends PHPUnit\Framework\TestCase
             }
         }
         $this->assertInternalType('array', $query);
-        $this->assertSame(6, count($query));
+        $this->assertCount(6, $query);
         $this->assertSame('checkid_setup', $query['openid.mode']);
         $this->assertSame('http%3A%2F%2Freal_id.myopenid.com%2F', $query['openid.identity']);
         $this->assertSame('http%3A%2F%2Fid.myopenid.com%2F', $query['openid.claimed_id']);
@@ -184,9 +184,9 @@ class Zend_Auth_Adapter_OpenIdTest extends PHPUnit\Framework\TestCase
         $headers = $response->getHeaders();
         $this->assertSame('', $response->getBody());
         $this->assertInternalType('array', $headers);
-        $this->assertSame(1, count($headers));
+        $this->assertCount(1, $headers);
         $this->assertInternalType('array', $headers[0]);
-        $this->assertSame(3, count($headers[0]));
+        $this->assertCount(3, $headers[0]);
         $this->assertSame('Location', $headers[0]['name']);
         $this->assertSame(true, $headers[0]['replace']);
         $url = $headers[0]['value'];
@@ -202,7 +202,7 @@ class Zend_Auth_Adapter_OpenIdTest extends PHPUnit\Framework\TestCase
             }
         }
         $this->assertInternalType('array', $query);
-        $this->assertSame(6, count($query));
+        $this->assertCount(6, $query);
         $this->assertSame('checkid_setup', $query['openid.mode']);
         $this->assertSame('http%3A%2F%2Freal_id.myopenid.com%2F', $query['openid.identity']);
         $this->assertSame('http%3A%2F%2Fid.myopenid.com%2F', $query['openid.claimed_id']);
@@ -232,9 +232,9 @@ class Zend_Auth_Adapter_OpenIdTest extends PHPUnit\Framework\TestCase
         $headers = $response->getHeaders();
         $this->assertSame('', $response->getBody());
         $this->assertInternalType('array', $headers);
-        $this->assertSame(1, count($headers));
+        $this->assertCount(1, $headers);
         $this->assertInternalType('array', $headers[0]);
-        $this->assertSame(3, count($headers[0]));
+        $this->assertCount(3, $headers[0]);
         $this->assertSame('Location', $headers[0]['name']);
         $this->assertSame(true, $headers[0]['replace']);
         $url = $headers[0]['value'];
@@ -250,7 +250,7 @@ class Zend_Auth_Adapter_OpenIdTest extends PHPUnit\Framework\TestCase
             }
         }
         $this->assertInternalType('array', $query);
-        $this->assertSame(6, count($query));
+        $this->assertCount(6, $query);
         $this->assertSame('checkid_setup', $query['openid.mode']);
         $this->assertSame('http%3A%2F%2Freal_id.myopenid.com%2F', $query['openid.identity']);
         $this->assertSame('http%3A%2F%2Fid.myopenid.com%2F', $query['openid.claimed_id']);
@@ -280,9 +280,9 @@ class Zend_Auth_Adapter_OpenIdTest extends PHPUnit\Framework\TestCase
         $headers = $response->getHeaders();
         $this->assertSame('', $response->getBody());
         $this->assertInternalType('array', $headers);
-        $this->assertSame(1, count($headers));
+        $this->assertCount(1, $headers);
         $this->assertInternalType('array', $headers[0]);
-        $this->assertSame(3, count($headers[0]));
+        $this->assertCount(3, $headers[0]);
         $this->assertSame('Location', $headers[0]['name']);
         $this->assertSame(true, $headers[0]['replace']);
         $url = $headers[0]['value'];
@@ -298,7 +298,7 @@ class Zend_Auth_Adapter_OpenIdTest extends PHPUnit\Framework\TestCase
             }
         }
         $this->assertInternalType('array', $query);
-        $this->assertSame(6, count($query));
+        $this->assertCount(6, $query);
         $this->assertSame('checkid_setup', $query['openid.mode']);
         $this->assertSame('http%3A%2F%2Freal_id.myopenid.com%2F', $query['openid.identity']);
         $this->assertSame('http%3A%2F%2Fid.myopenid.com%2F', $query['openid.claimed_id']);
@@ -328,7 +328,7 @@ class Zend_Auth_Adapter_OpenIdTest extends PHPUnit\Framework\TestCase
         $this->assertSame(0, $ret->getCode());
         $msgs = $ret->getMessages();
         $this->assertInternalType('array', $msgs);
-        $this->assertSame(2, count($msgs));
+        $this->assertCount(2, $msgs);
         $this->assertSame('Authentication failed', $msgs[0]);
         $this->assertSame('Signature check failed', $msgs[1]);
     }
@@ -447,9 +447,9 @@ class Zend_Auth_Adapter_OpenIdTest extends PHPUnit\Framework\TestCase
         $headers = $response->getHeaders();
         $this->assertSame('', $response->getBody());
         $this->assertInternalType('array', $headers);
-        $this->assertSame(1, count($headers));
+        $this->assertCount(1, $headers);
         $this->assertInternalType('array', $headers[0]);
-        $this->assertSame(3, count($headers[0]));
+        $this->assertCount(3, $headers[0]);
         $this->assertSame('Location', $headers[0]['name']);
         $this->assertSame(true, $headers[0]['replace']);
         $url = $headers[0]['value'];
@@ -465,7 +465,7 @@ class Zend_Auth_Adapter_OpenIdTest extends PHPUnit\Framework\TestCase
             }
         }
         $this->assertInternalType('array', $query);
-        $this->assertSame(6, count($query));
+        $this->assertCount(6, $query);
         $this->assertSame('checkid_immediate', $query['openid.mode']);
         $this->assertSame('http%3A%2F%2Freal_id.myopenid.com%2F', $query['openid.identity']);
         $this->assertSame('http%3A%2F%2Fid.myopenid.com%2F', $query['openid.claimed_id']);
