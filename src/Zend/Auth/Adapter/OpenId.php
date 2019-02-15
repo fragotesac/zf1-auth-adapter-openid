@@ -104,11 +104,11 @@ class Zend_Auth_Adapter_OpenId implements Zend_Auth_Adapter_Interface
      */
     public function __construct(
         $id = null,
-                                Zend_OpenId_Consumer_Storage $storage = null,
-                                $returnTo = null,
-                                $root = null,
-                                $extensions = null,
-                                Zend_Controller_Response_Abstract $response = null
+        Zend_OpenId_Consumer_Storage $storage = null,
+        $returnTo = null,
+        $root = null,
+        $extensions = null,
+        Zend_Controller_Response_Abstract $response = null
     ) {
         $this->_id         = $id;
         $this->_storage    = $storage;
@@ -230,10 +230,10 @@ class Zend_Auth_Adapter_OpenId implements Zend_Auth_Adapter_Interface
             if (!$this->_check_immediate) {
                 if (!$consumer->login(
                     $id,
-                        $this->_returnTo,
-                        $this->_root,
-                        $this->_extensions,
-                        $this->_response
+                    $this->_returnTo,
+                    $this->_root,
+                    $this->_extensions,
+                    $this->_response
                 )) {
                     return new Zend_Auth_Result(
                         Zend_Auth_Result::FAILURE,
@@ -244,10 +244,10 @@ class Zend_Auth_Adapter_OpenId implements Zend_Auth_Adapter_Interface
             } else {
                 if (!$consumer->check(
                     $id,
-                        $this->_returnTo,
-                        $this->_root,
-                        $this->_extensions,
-                        $this->_response
+                    $this->_returnTo,
+                    $this->_root,
+                    $this->_extensions,
+                    $this->_response
                 )) {
                     return new Zend_Auth_Result(
                         Zend_Auth_Result::FAILURE,
@@ -262,9 +262,9 @@ class Zend_Auth_Adapter_OpenId implements Zend_Auth_Adapter_Interface
             $consumer = new Zend_OpenId_Consumer($this->_storage);
             $consumer->setHttpClient($this->_httpClient);
             if ($consumer->verify(
-                    $params,
-                    $id,
-                    $this->_extensions
+                $params,
+                $id,
+                $this->_extensions
             )) {
                 return new Zend_Auth_Result(
                     Zend_Auth_Result::SUCCESS,

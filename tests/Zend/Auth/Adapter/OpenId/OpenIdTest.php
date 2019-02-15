@@ -498,7 +498,7 @@ class Zend_Auth_Adapter_OpenIdTest extends PHPUnit\Framework\TestCase
                           "Connection: close\r\n" .
                           "Accept-encoding: gzip, deflate\r\n" .
                           "User-Agent: Zend_OpenId\r\n\r\n",
-                          $http->getLastRequest()
+            $http->getLastRequest()
         );
     }
 }
