@@ -1,8 +1,13 @@
 parameters:
-    level: 6
+    level: 7
     paths:
         - ./
     excludes_analyse:
         - %rootDir%/../../../vendor/*
         - %rootDir%/../../../tests/*
     ignoreErrors:
+        # the check and login methods don't return on success, so those branches don't need returns, all other paths
+        # seem to be covered by a return.
+        -
+            message: '#Method Zend_Auth_Adapter_OpenId::authenticate\(\) should return Zend_Auth_Result but return statement is missing\.#'
+            path: './src/Zend/Auth/Adapter/OpenId.php'

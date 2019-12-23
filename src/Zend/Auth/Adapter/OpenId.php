@@ -207,6 +207,7 @@ class Zend_Auth_Adapter_OpenId implements Zend_Auth_Adapter_Interface
      * Sets HTTP client object to make HTTP requests
      *
      * @param Zend_Http_Client $client HTTP client object to be used
+     * @return void
      */
     public function setHttpClient($client)
     {
