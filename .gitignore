@@ -4,3 +4,4 @@
 /tests/Zend/Auth/Adapter/OpenId/_files/*
 .php_cs.cache
 .phpunit.result.cache
+.php-cs-fixer.cache
