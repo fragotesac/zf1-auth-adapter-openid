@@ -11,9 +11,9 @@
     "prefer-stable": true,
     "require": {
         "php": "~8.0.0 || ~8.1.0 || ~8.2.0 || ~8.3.0",
-        "diablomedia/zendframework1-controller": "^1.0.6",
-        "diablomedia/zendframework1-openid": "^1.0.6",
-        "diablomedia/zendframework1-auth": "^1.0.5"
+        "fragotesac/zf1-controller": "^1.0.6",
+        "fragotesac/zf1-openid": "^1.0.6",
+        "fragotesac/zf1-auth": "^1.0.5"
     },
     "autoload": {
         "classmap": [
