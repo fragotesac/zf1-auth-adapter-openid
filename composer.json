@@ -1,5 +1,5 @@
 {
-    "name": "diablomedia/zendframework1-auth-adapter-openid",
+    "name": "fragotesac/zf1-auth-adapter-openid",
     "description": "Zend Framework 1 Auth_Adapter_OpenId component",
     "type": "library",
     "keywords": [
